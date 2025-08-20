@@ -59,12 +59,6 @@ $ cd node-blue-boilerplate
 $ npm install
 ```
 
-## Author
-
-| [<img src="https://avatars3.githubusercontent.com/u/37452836?s=96&v=4"><br><sub>Felipe Aguiar</sub>](https://github.com/felipeAguiarCode) |
-| :---------------------------------------------------------------------------------------------------------------------------------------: |
-|                                            [Linkedin](www.linkedin.com/in/felipe-aguiar-exe/)                                             |
-
 # Credits
 
 icons by [Pino Lamanna][dribble-icon]
