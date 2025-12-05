@@ -1,9 +1,10 @@
 <div align="center">
 
   <img src="./.github/assets/blue-saiyan-bg.png" alt="Logo" height="200">
-  <h1 align="center"><strong>NODE BOILERPLATE - BLUE EDITION</strong></h1>
+  <h1 align="center"><strong>DIO API FASTIFY - FÓRMULA 1</strong></h1>
   <p align="center">
-	  Don't start a new Node project from zero!<br> Use this simple <b>Nodejs</b> boilerplate with pre-configured <b>Typescript</b> in a modern way.
+	  API REST para gerenciar informações de equipes e pilotos de Fórmula 1<br>
+    Desenvolvida com <b>Fastify</b> e <b>TypeScript</b>
   </p>
 
 </div>
@@ -15,49 +16,96 @@
   
   [![TypeScript version][ts-badge]][typescript-5-4]
   [![Node.js version][nodejs-badge]][nodejs]
+  [![Fastify][fastify-badge]][fastify]
 
 </div>
 
-# 🚀 Technologies
+# 📖 Sobre o Projeto
 
-This code source was developed with the following items:
+Esta é uma API RESTful desenvolvida com Fastify que fornece informações sobre equipes e pilotos de Fórmula 1. O projeto foi criado como parte do curso da Digital Innovation One (DIO) para demonstrar o desenvolvimento de APIs modernas com TypeScript.
 
-### 📦 Dependencies
+## 🎯 Funcionalidades
 
-- [typescript][typescript-npm] - Superset for application scale JavaScript development
-- [tsx][tsx-npm] - TypeScript Execute (tsx): Enable Node.js to run TypeScript
-- [tsup][tsup-npm] - Bundle your TypeScript library with no config, powered by esbuild
-- [@types/node][@types/node-npm] - type definitions for node
+A API oferece os seguintes endpoints:
 
-### 📄 Files
+- **GET /teams** - Lista todas as equipes de Fórmula 1
+- **GET /drivers** - Lista todos os pilotos
+- **GET /drivers/:id** - Busca um piloto específico por ID
 
-- `.gitignore` - Ignore folders like node_modules
-- `.env` - Enviroment variables
-- `tsconfig.json` - Typescript configure Options
+# 🚀 Tecnologias
 
-### ⚡ Scripts
+Este projeto foi desenvolvido com as seguintes tecnologias:
 
-- `npm run dist`: Compiles TypeScript files to JavaScript in the dist directory.
-- `npm run start:dev`: Runs the server in development mode with environment variables loaded from the .env file.
-- `npm run start:watch`: Runs the server in development mode with support for automatic reload on file changes.
-- `npm run start:dist`: Compiles the project and runs the compiled version from the dist directory.
+### 📦 Dependências Principais
 
-# 👨‍💻 How To Use
+- [Fastify][fastify] - Framework web rápido e eficiente para Node.js
+- [@fastify/cors][@fastify/cors-npm] - Plugin CORS para Fastify
+- [TypeScript][typescript-npm] - Superset JavaScript com tipagem estática
+- [tsx][tsx-npm] - TypeScript Execute - executa TypeScript diretamente no Node.js
+- [tsup][tsup-npm] - Bundler TypeScript com zero configuração
+- [@types/node][@types/node-npm] - Definições de tipos para Node.js
 
-click in **[Use this template]** OR
+### 📄 Arquivos de Configuração
 
-To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v20+](https://nodejs.org/en/) + [NPM v10+](https://nodejs.org/en/) installed on your computer. From your command line:
+- `.gitignore` - Ignora pastas como node_modules
+- `.env` - Variáveis de ambiente
+- `tsconfig.json` - Opções de configuração do TypeScript
+
+### ⚡ Scripts Disponíveis
+
+- `npm run dist`: Compila os arquivos TypeScript para JavaScript no diretório dist
+- `npm run start:dev`: Executa o servidor em modo de desenvolvimento com variáveis de ambiente do arquivo .env
+- `npm run start:watch`: Executa o servidor em modo de desenvolvimento com recarregamento automático ao detectar mudanças
+- `npm run start:dist`: Compila o projeto e executa a versão compilada do diretório dist
+
+# 👨‍💻 Como Usar
+
+Para clonar e executar esta aplicação, você precisará ter instalado em seu computador:
+- [Git](https://git-scm.com)
+- [Node.js v20+](https://nodejs.org/en/)
+- [NPM v10+](https://nodejs.org/en/)
+
+Execute os seguintes comandos no terminal:
 
 ```bash
-# Clone this repository
-$ git clone https://github.com/felipeAguiarCode/node-blue-boilerplate
+# Clone este repositório
+$ git clone https://github.com/ygorroberto/dio-api-fastify
 
-# Go into the repository
-$ cd node-blue-boilerplate
+# Entre no diretório do projeto
+$ cd dio-api-fastify
 
-# Install dependencies
+# Instale as dependências
 $ npm install
+
+# Execute o servidor em modo de desenvolvimento
+$ npm run start:dev
+
+# Ou execute com recarregamento automático
+$ npm run start:watch
 ```
+
+O servidor estará rodando em `http://localhost:3333`
+
+## 📝 Exemplos de Uso
+
+### Listar todas as equipes
+```bash
+GET http://localhost:3333/teams
+```
+
+### Listar todos os pilotos
+```bash
+GET http://localhost:3333/drivers
+```
+
+### Buscar um piloto específico
+```bash
+GET http://localhost:3333/drivers/1
+```
+
+# 📄 Licença
+
+Este projeto está sob a licença ISC.
 
 # Credits
 
@@ -68,8 +116,11 @@ icons by [Pino Lamanna][dribble-icon]
 [ts-badge]: https://img.shields.io/badge/TypeScript-5.4-blue.svg
 [nodejs-badge]: https://img.shields.io/badge/Node.js->=%2020.00-blue.svg
 [nodejs]: https://nodejs.org/
+[fastify-badge]: https://img.shields.io/badge/Fastify-5.5-black.svg
+[fastify]: https://fastify.dev/
 [dribble-icon]: https://dribbble.com/Schakalwal
 [typescript-npm]: https://www.npmjs.com/package/typescript
 [tsx-npm]: https://www.npmjs.com/package/tsx
 [tsup-npm]: https://www.npmjs.com/package/tsup
 [@types/node-npm]: https://www.npmjs.com/package/@types/node
+[@fastify/cors-npm]: https://www.npmjs.com/package/@fastify/cors
